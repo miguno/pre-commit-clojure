@@ -6,6 +6,13 @@
   language: script
   require_serial: true
   args: ["warning"]
+- id: cljfmt
+  name: format with cljfmt
+  description: Format files using cljfmt
+  types: [clojure]
+  entry: hooks/cljfmt-pre-commit
+  language: script
+  require_serial: false
 - id: zprint
   name: format with zprint
   description: Format files using zprint
