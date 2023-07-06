@@ -7,7 +7,17 @@
 - [zprint (file formatting)](https://github.com/kkinnear/zprint)
 - [cljfmt (file formatting)](https://github.com/weavejester/cljfmt)
 
-## Usage with pre-commit
+## Configure pre-commit
+
+1. Install pre-commit: `$ pip install pre-commit`
+2. Add a pre-commit configuration: create a file named `.pre-commit-config.yaml`
+3. Install the git hook scripts: `$ pre-commit install`  => now pre-commit will run automatically on `git commit`!
+4. (Optional) Run against all the files: `$ pre-commit run --all-files`
+
+Or follow the install instructions [here](https://pre-commit.com/#quick-start)
+
+
+## Usage with .pre-commit-config.yaml
 
 ```yaml
 repos:
