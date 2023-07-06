@@ -1,17 +1,21 @@
 # Clojure hooks for pre-commit
 
-[Clojure](https://clojure.org/) package for [pre-commit](https://pre-commit.com) hooks. Integrates with popular packages such as [clj-kondo (static linter)](https://github.com/clj-kondo/clj-kondo), [kaocha (unit testing)](https://github.com/lambdaisland/kaocha), and [zprint (file formatting)](https://github.com/kkinnear/zprint).
+[Clojure](https://clojure.org/) package for [pre-commit](https://pre-commit.com) hooks. Integrates with popular packages such as 
+
+- [clj-kondo (static linter)](https://github.com/clj-kondo/clj-kondo)
+- [kaocha (unit testing)](https://github.com/lambdaisland/kaocha)
+- [zprint (file formatting)](https://github.com/kkinnear/zprint)
+- [cljfmt (file formatting)](https://github.com/weavejester/cljfmt)
 
 ## Usage with pre-commit
 
 ```yaml
+repos:
 -   repo: https://github.com/humorless/pre-commit-clojure
-    rev: v1.0
+    rev: b0612489704cec536e2687ec570b47795c993f42
     hooks:
-    -   id: clj-kondo
     -   id: cljfmt
-    -   it: kaocha
-    
+    -   id: kaocha
 ```
 
 ## Passing arguments to clj-kondo
