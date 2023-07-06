@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-if ! command -v zprint &> /dev/null
+if ! command -v cljfmt &> /dev/null
 then
-    echo "zprint could not be found. Please follow the installation instructions here https://github.com/kkinnear/zprint/blob/main/doc/using/files.md"
+    echo "cljfmt could not be found. Please follow the installation instructions here https://github.com/weavejester/cljfmt"
     exit 2
 fi
 
-result=$(zprint -fw $@ 2>&1)
+result=$(cljfmt fix $@ 2>&1)
 
 if [ -z "$result" ]; then
     exit 0;
