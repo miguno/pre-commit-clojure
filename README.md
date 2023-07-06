@@ -5,11 +5,11 @@
 ## Usage with pre-commit
 
 ```yaml
--   repo: https://github.com/vincentjames501/pre-commit-clojure
-    rev: v1.x
+-   repo: https://github.com/humorless/pre-commit-clojure
+    rev: v1.0
     hooks:
     -   id: clj-kondo
-    -   id: zprint
+    -   id: cljfmt
     -   it: kaocha
     
 ```
